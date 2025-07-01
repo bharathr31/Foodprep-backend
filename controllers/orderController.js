@@ -5,7 +5,7 @@ const userModel  = require('../models/userModel')
 const stripe     = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5173"
+  const frontend_url = "https://foodprep-userfront-rb31.onrender.com"
   try {
     // 1. Persist the order with the front-end’s calculated amount
     const newOrder = await orderModel.create({
