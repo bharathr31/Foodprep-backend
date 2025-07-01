@@ -33,8 +33,8 @@ const placeOrder = async (req, res) => {
         }
       ],
       mode:        'payment',
-      success_url: `${frontend_url}/index.html?success=true&orderId=${newOrder._id}`,
-      cancel_url:  `${frontend_url}/index.html?success=false&orderId=${newOrder._id}`
+      success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
+      cancel_url:  `${frontend_url}/verify?success=false&orderId=${newOrder._id}`
     })
 
     // 4. Return the session URL
